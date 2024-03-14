@@ -1,4 +1,5 @@
-from socket import *
+from utils_server import *
+
 serverPort = 12000
 
 # Criação do Socket Servidor
