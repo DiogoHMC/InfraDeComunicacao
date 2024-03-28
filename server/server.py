@@ -16,6 +16,11 @@ while True:
     connectionSocket, addr = serverSocket.accept()
     sentence = connectionSocket.recv(1024).decode ()
     print("Mensagem recebida:", sentence)
+
     capitalizedSentence = sentence.upper()
     connectionSocket.send(capitalizedSentence .encode())
+
+    if sentence == 'exit':
+        break
+
     connectionSocket.close()
